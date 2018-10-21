@@ -38,16 +38,23 @@ body {
 #hero-section_learn-more {
   position: absolute;
   bottom: 10vh;
-  width: 100%;
+  width: 100vw;
   max-width: 100%;
+  left: 0;
+  right: 0;
   text-align: center;
   animation: float-up 1s ease-out, bounce 2s infinite;
   font-weight: normal;
   border-bottom: none;
+  transition: color 0.2s;
 }
 #hero-section_learn-more a {
   border: none;
   font-weight: normal;
+}
+
+#hero-section_learn-more a:hover * {
+  color: #B8CC73;
 }
 
 @keyframes bounce {
@@ -72,4 +79,43 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+#aboutMe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+}
+
+#aboutMe div {
+}
+
+#aboutMe img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#aboutHoverCard-ctn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#aboutHoverCard {
+}
+
+#aboutMe__img-ctn {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  margin: 0;
+}
+
+#experience {
+  overflow: auto;
+  background: #555;
 }
