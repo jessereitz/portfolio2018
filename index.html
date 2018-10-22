@@ -7,14 +7,16 @@
     <!-- <script src="https://cdn.jsdelivr.net/gh/jessereitz/branding@--version--/assets/js/rbrandlib.js" type="text/javascript"></script> -->
     <!-- <link href="https://cdn.jsdelivr.net/combine/gh/jessereitz/branding@--version--/assets/css/site.min.css" type="text/css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link href="/Users/jessereitz/Documents/branding/assets/css/rbrandlib.css" type="text/css" rel="stylesheet">
-    <script src="/Users/jessereitz/Documents/branding/assets/js/rbrandlib.js" type="text/javascript"></script>
+    <!-- <link href="/home/jessereitz/Documents/dev/branding/assets/css/rbrandlib.css" type="text/css" rel="stylesheet">
+    <script src="/home/jessereitz/Documents/dev/branding/assets/js/rbrandlib.js" type="text/javascript"></script> -->
+    <link href="./lib/css/rbrandlib.css" type="text/css" rel="stylesheet">
+    <script src="./lib/js/rbrandlib.js" type="text/javascript"></script>
     <link href="./assets/site.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <section id="hero-section">
       <div class="r_vertical-center margin-none padding-none r_full-width">
-        <h1 class="menuTarget" data-scrolltarget="hero-section">jesse reitz | web developer</h1>
+        <h1 class="menuTarget" data-linktext="home" data-scrolltarget="hero-section">jesse reitz | web developer</h1>
         <em>let's make the world a better place, one line of code at a time</em>
       </div>
 
@@ -24,8 +26,8 @@
     </section>
 
     <section id="aboutMe">
-      <div id="aboutHoverCard-ctn">
-        <div id="aboutHoverCard" class="hover-card">
+      <div id="about-me__hover-card__ctn">
+        <div id="about-me__hover-card" class="hover-card">
           <h2 id="testHeading" class="menuTarget" data-scrolltarget="aboutMe">about me</h2>
           <p>
             Hey there! My name is Jesse. I'm a web developer passionate about
@@ -38,28 +40,56 @@
             My
             experience of late has focused on the front end but I love working
             on the back end as well. On the front end I mainly write in
-            vanilla JavaScript while I have mostly utilized Python (especially
+            vanilla JavaScript while I mostly utilize Python (especially
             Django and Flask) on the back end, though Node is increasingly
             nudging its way into the picture.
           </p>
           <p>
-            Please, take a <a href="#experience" data-scrolltype="smooth">look
+            Please take a <a href="#experience" data-scrolltype="smooth">look
             around</a> and <a href="#contact" data-scrolltype="smooth">drop me a
             line</a> if you want to discuss how I can be an asset to your team!
           </p>
         </div>
       </div>
-      <div id="aboutMe__img-ctn">
+      <div id="about-me__img__ctn">
         <img src="https://jrweb-portfolio-files.s3.amazonaws.com/static/portfolio/images/jesse.jpg">
       </div>
     </section>
 
-    <section  id='experience' style="height: 100vh;">
-      <h2 id="experienceHeading" class="menuTarget">recent experience</h2>
+    <section  id="experience" style="height: 100vh;">
+      <h2 style="padding-left: 1rem; padding-top: 1em;" id="experienceHeading" class="menuTarget" data-scrolltarget="experience">recent experience</h2>
+      <div id="experienceCardCtn">
+        <div class='hover-card'>
+          <h3>WriteFree</h3>
+        </div>
+
+        <div class='hover-card'>
+          <h3>ISA Easy Email</h3>
+        </div>
+
+        <div class='hover-card'>
+          <h3>Safety Penguin</h3>
+        </div>
+
+      </div>
     </section>
 
-    <section style="height: 100vh;">
-      <h2 id="testHeading3" class="menuTarget">Test Heading 3</h2>
+    <section id="contact" style="height: 100vh;">
+      <h2 style="padding-left: 1rem; padding-top: 1em;" id="contactHeading" class="menuTarget" data-scrolltarget="contact">contact</h2>
+      <div class="hover-card">
+        <h3 id="contactHeading">send a message</h3>
+        <form>
+          <label>Name</label>
+          <input type="text">
+          <label>Email</label>
+          <input type="email">
+          <label>Phone</label>
+          <input type="tel">
+          <label>Message</label>
+          <textarea></textarea>
+          <input type="submit">
+        </form>
+      </div>
     </section>
   </body>
 </html>
