@@ -4,6 +4,12 @@ body {
   padding: 0;
 }
 
+@media screen and (max-width: 650px) {
+  .hover-card {
+    max-width: 95%;
+  }
+}
+
 #hero-section {
   height: 100vh;
   width: 100vw;
@@ -101,19 +107,15 @@ body {
 }
 
 #about-me__hover-card__ctn {
+  grid-area: hc;
   max-width: 100%;
-  /* grid-column-start: 1; */
-  /* grid-column-end: 3; */
   display: flex;
   align-items: center;
   justify-content: space-around;
-  grid-area: hc;
 }
 
 #about-me__img__ctn {
   max-width: 100%;
-  /* grid-column-start: 3; */
-  /* grid-column-end: 5; */
   margin: 0;
   grid-area: img;
 }
@@ -127,7 +129,7 @@ body {
   }
 
   #about-me__hover-card__ctn {
-    padding: 0.5em 1rem;
+    /* padding: 0.5em 1rem; */
   }
 
   #about-me__img__ctn {
@@ -185,6 +187,7 @@ body {
   z-index: 2;
   width: 100%;
   max-width: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
@@ -192,8 +195,126 @@ body {
 }
 
 #experienceCardCtn .hover-card {
+  position: relative;
   width: 100%;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#experienceCardCtn .hover-card img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media screen and (max-width: 1450px) {
+  #experienceCardCtn {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #experienceCardCtn {
+    grid-template-columns: 1fr;
+  }
+}
+
+.experience__hover-card__text {
+  position: relative;
+  z-index: 5;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.1);
+  overflow: auto;
+  border-top: 1px solid #ddd;
+}
+
+.experience__hover-card__text h3 {
+  display: inline-block;
+  margin: 1em 1rem;
+}
+
+.experience__more-info {
+  display: inline-block;
+  width: auto;
+  position: absolute;
+  right: 1rem;
+}
+
+.experience__more-info:active {
+  position: absolute;
+}
+
+
+.experience__hover-card__aux-ctn {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.experience__hover-card__overlay {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.7);
+  background: rgba(71, 109, 164, 0.5);
+  background: linear-gradient(135deg, rgba(71, 109, 164, 0.7), rgba(71, 109, 164, 0.85), rgba(71, 109, 164, 1));
+  margin: 0;
+  padding: 1em 1rem;
+  max-width: 100%;
+  color: #fff;
+  transition: top 0.2s;
+  overflow: scroll;
+}
+
+.experience__hover-card__overlay::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6), rgba(0,0,0,0.75));
+}
+
+.experience__hover-card__overlay__inner {
+  padding: 0;
+  max-width: 100%;
+}
+
+.experience__hover-card__overlay p {
+  color: #fff;
+}
+
+.experience__hover-card__overlay__inner a.link-btn {
+  display: inline-block;
+  width: auto;
+  margin: 1em 1rem;
+  color: #fff;
+  border-color: #fff;
+}
+
+.experience__hover-card__overlay__inner a.link-btn i {
+  color: #fff;
+}
+
+.experience__hover-card__overlay a.link-btn:hover {
+  transform: none;
 }
 
 form {
@@ -203,4 +324,47 @@ form {
 #contact h3 {
   font-size: 1.5em;
   border-bottom: 1px solid #98b0d2;
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  max-width: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 100000000000;
+}
+
+.modal a.link-btn {
+  color: #666;
+  border-color: #666;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 500px) {
+  .modal a.link-btn {
+    display: block;
+    margin: 1em 1rem !important;
+    width: auto;
+  }
+}
+
+.modal a.link-btn:hover {
+  color: #fff;
+  box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.1);
+}
+
+.modal a.link-btn i {
+  color: #666;
+  transition: all 0.2s;
+}
+
+.modal a.link-btn:hover i {
+  color: #fff;
 }
