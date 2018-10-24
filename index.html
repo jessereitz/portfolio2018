@@ -60,6 +60,7 @@
       <h2 style="padding-left: 1rem; padding-top: 1em;" id="experienceHeading" class="menuTarget" data-scrolltarget="experience">recent experience</h2>
       <div id="experienceCardCtn">
         <div class='hover-card experience__hover-card'>
+
           <div class="experience__hover-card__aux-ctn">
             <img src="./assets/images/writefree-screenshot.png" alt="Screenshot demonstrating the WriteFree text editor">
             <div class="experience__hover-card__overlay">
@@ -70,8 +71,8 @@
                   the core functionality needed to create something beautiful.
                 </p>
                 <div class="align-center">
-                  <a href="#" class="link-btn"><i class="fab fa-github fa-lg"></i>  View on GitHub</a>
-                  <a href="#" class="link-btn">View Demo/Docs  <i class="fas fa-external-link-square-alt"></i></a>
+                  <a href="https://github.com/jessereitz/WriteFree" class="link-btn" target="_blank"><i class="fab fa-github fa-lg"></i>  View on GitHub</a>
+                  <a href="https://jessereitz.github.io/WriteFree/" class="link-btn" target="_blank">View Demo/Docs  <i class="fas fa-external-link-square-alt"></i></a>
                 </div>
               </div>
             </div>
@@ -88,13 +89,13 @@
             <div class="experience__hover-card__overlay">
               <div class="experience__hover-card__overlay__inner">
                 <p>
-                  WriteFree is a simple, embeddable rich text editor written entirely in vanilla JavaScript.
-                  The idea was to create a simple editor that gets out of the author's way while still providing
-                  the core functionality needed to create something beautiful.
+                  ISA Easy Email was created as an alternative to the clunky in-house HTML email editor at a former company.
+                  It is built around my WriteFree editor and allows users to see the progress of their work and to save their
+                  email templates directly to their local machine.
                 </p>
                 <div class="align-center">
-                  <a href="#" class="link-btn"><i class="fab fa-github fa-lg"></i>  View on GitHub</a>
-                  <a href="#" class="link-btn">View Demo/Docs  <i class="fas fa-external-link-square-alt"></i></a>
+                  <a href="https://github.com/jessereitz/ISAEasyEmail" class="link-btn" target="_blank"><i class="fab fa-github fa-lg"></i>  View on GitHub</a>
+                  <a href="https://jessereitz.github.io/ISAEasyEmail/" class="link-btn" target="_blank">View Demo  <i class="fas fa-external-link-square-alt"></i></a>
                 </div>
               </div>
             </div>
@@ -111,14 +112,15 @@
             <div class="experience__hover-card__overlay">
               <div class="experience__hover-card__overlay__inner">
                 <p>
-                  WriteFree is a simple, embeddable rich text editor written entirely in vanilla JavaScript.
-                  The idea was to create a simple editor that gets out of the author's way while still providing
-                  the core functionality needed to create something beautiful.
+                  Safety Penguin is a proprietary web application which allows users to passively stay up-to-date on the
+                  wellfare of loved ones. Using a web or SMS text message interface, users can schedule check-in times.
+                  If they don't check in with Safety Penguin before that time, their chosen loved one will receive a
+                  notification reminding them to check on the user.
                 </p>
-                <div class="align-center">
+                <!-- <div class="align-center">
                   <a href="#" class="link-btn"><i class="fab fa-github fa-lg"></i>  View on GitHub</a>
                   <a href="#" class="link-btn">View Demo/Docs  <i class="fas fa-external-link-square-alt"></i></a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -131,27 +133,47 @@
       </div>
     </section>
 
-    <section id="contact" style="height: 100vh;">
+    <section id="contact">
       <h2 style="padding-left: 1rem; padding-top: 1em;" id="contactHeading" class="menuTarget" data-scrolltarget="contact">contact</h2>
-      <div class="hover-card">
-        <h3 id="contactHeading">send a message</h3>
-        <form>
-          <label>Name</label>
-          <input type="text">
-          <label>Email</label>
-          <input type="email">
-          <label>Phone</label>
-          <input type="tel">
-          <label>Message</label>
-          <textarea></textarea>
-          <input type="submit">
-        </form>
+      <div class="contact__inner-ctn">
+        <div class="hover-card">
+          <p>
+            Like what you see? Want to see more? Great to hear! I am
+            currently available for developer opportunities in the Austin, TX area.
+            Check out my social accounts below and/or drop me a line in the
+            "send a message" form on this page. I'd love to discuss how I can be
+            an asset to your team!
+          </p>
+          <h3>social</h3>
+          <div class="contact__social-btn-ctn">
+            <a href="https://github.com/jessereitz" class="link-btn" target="_blank"><i class="fab fa-github fa-lg"></i>  GitHub</a>
+            <a href="https://angel.co/jesse-reitz" class="link-btn" target="_blank"><i class="fab fa-angellist"></i>  AngelList</a>
+            <a href="https://www.linkedin.com/in/jesse-reitz/" class="link-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="hover-card contact__form-ctn">
+          <h3 id="contactHeading">send a message</h3>
+          <form method="POST" action="https://formspree.io/jessereitz1@gmail.com">
+            <label>Name</label>
+            <input name="name" type="text">
+            <label>Email</label>
+            <input name="email" type="email">
+            <label>Phone</label>
+            <input name="phone" type="tel">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+            <input type="submit">
+          </form>
+        </div>
       </div>
     </section>
 
-    <div id="main-modal" class="modal"><div class="hover-card modal__window">
+    <footer>
+      ©2018 Jesse Reitz
+    </footer>
 
-    </div></div>
+    <div id="main-modal" class="modal"><div class="hover-card modal__window"></div></div>
 
     <script src="./assets/site.js" type="text/javascript"></script>
   </body>

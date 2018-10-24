@@ -37,7 +37,7 @@ body {
 
 #hero-section h1 {
   font-size: 3em;
-  line-height: auto;
+  line-height: 1.25em;
   color: white;
 }
 
@@ -120,27 +120,6 @@ body {
   grid-area: img;
 }
 
-@media screen and (max-width: 1000px) {
-  #aboutMe {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "hc";
-
-  }
-
-  #about-me__hover-card__ctn {
-    /* padding: 0.5em 1rem; */
-  }
-
-  #about-me__img__ctn {
-    display: none;
-  }
-
-  #about-me__img__ctn img {
-    max-height: 30vh;
-    max-width: 100%;
-  }
-}
 
 
 #experience {
@@ -148,6 +127,7 @@ body {
   position:relative;
   overflow: auto;
   background: #606474;
+  min-height: 100vh;
 }
 
 #experience::before {
@@ -176,6 +156,32 @@ body {
     );
 
     z-index: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  #aboutMe {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "hc";
+
+  }
+
+  #about-me__img__ctn {
+    display: none;
+  }
+
+  #about-me__img__ctn img {
+    max-height: 30vh;
+    max-width: 100%;
+  }
+
+  #experience {
+    background: none;
+  }
+
+  #experience::before {
+    display: none;
+  }
 }
 #experience h2 {
   position: relative;
@@ -271,7 +277,7 @@ body {
   z-index: 2;
   background: rgba(0,0,0,0.7);
   background: rgba(71, 109, 164, 0.5);
-  background: linear-gradient(135deg, rgba(71, 109, 164, 0.7), rgba(71, 109, 164, 0.85), rgba(71, 109, 164, 1));
+  background: linear-gradient(135deg, rgba(71, 109, 164, 0.85), rgba(71, 109, 164, 0.9), rgba(71, 109, 164, 1));
   margin: 0;
   padding: 1em 1rem;
   max-width: 100%;
@@ -289,7 +295,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6), rgba(0,0,0,0.75));
+  background: linear-gradient(135deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6), rgba(0,0,0,0.75));
 }
 
 .experience__hover-card__overlay__inner {
@@ -324,6 +330,60 @@ form {
 #contact h3 {
   font-size: 1.5em;
   border-bottom: 1px solid #98b0d2;
+}
+
+.contact__inner-ctn {
+  text-align: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contact__inner-ctn .hover-card {
+  display: inline-block;
+  text-align: left;
+  margin: 1em 1rem;
+  vertical-align: top;
+}
+
+.contact__form-ctn {
+  min-width: 40%;
+  /* max-width: 100%; */
+  margin: 1em 1rem;
+}
+
+@media screen and (max-width: 1048px) {
+  .contact__inner-ctn .hover-card {
+    display: block;
+    margin: 1em auto;
+  }
+}
+
+.contact__social-btn-ctn {
+  text-align: center;
+}
+
+.contact__social-btn-ctn .link-btn {
+  margin: 0.5em 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .contact__social-btn-ctn a.link-btn {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+  }
+}
+
+.contact__social-btn-ctn .link-btn:hover {
+  transform: none;
+}
+
+footer {
+  width: 100%;
+  padding: 1.5em 1rem;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0.05), rgba(0,0,0,0.1), rgba(0,0,0,0.25));
 }
 
 .modal {
