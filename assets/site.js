@@ -31,7 +31,9 @@ const modal = {
    */
   removeContent() {
     if (this.$window.$content) {
-      this.$window.removeChild(this.$window.$content);
+      if (this.$window.$content.prevParent) {
+        this.$window.$content.prevParent.appendChild(this.$window.$content);
+      } else this.$window.removeChild(this.$window.$content);
       this.$window.$content = null;
     }
   },
@@ -44,8 +46,9 @@ const modal = {
    */
   display($content) {
     this.removeContent();
-    this.$window.insertBefore($content, this.$closeBtn);
     this.$window.$content = $content;
+    if (this.$window.$content.parentNode) this.$window.$content.prevParent = $content.parentNode;
+    this.$window.insertBefore($content, this.$closeBtn);
     this.$ctn.style.display = 'flex';
     this.hidden = false;
   },
@@ -84,12 +87,16 @@ const experienceCard = {
       } else {
         modal.hide();
       }
+      this.$overlay.style.top = '100%';
+      this.$infoBtn.textContent = 'More Info';
+      return;
+    }
+    if (this.$overlay.style.top === '100%' || this.$overlay.style.top === '') {
+      this.$overlay.style.top = '0';
+      this.$infoBtn.textContent = 'Close Info';
     } else {
-      if (this.$overlay.style.top === '100%' || this.$overlay.style.top === '') {
-        this.$overlay.style.top = '0';
-      } else {
-        this.$overlay.style.top = '100%';
-      }
+      this.$overlay.style.top = '100%';
+      this.$infoBtn.textContent = 'More Info';
     }
   },
 };
@@ -97,7 +104,6 @@ const experienceCard = {
 document.addEventListener('DOMContentLoaded', () => {
   modal.init();
   const rawExperienceCards = Array.from(document.querySelectorAll('.experience__hover-card'));
-  console.log(rawExperienceCards);
   const experienceCards = rawExperienceCards.map(($cardCtn) => {
     const card = Object.create(experienceCard);
     card.init($cardCtn);
