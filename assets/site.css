@@ -11,11 +11,12 @@ body {
 }
 
 section {
-  border-bottom: 1px solid rgba(255,255,255,0.5);
   border-bottom: 1px solid #fff;
   box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.15);
   margin: 0;
   overflow:hidden;
+  min-height: 100vh;
+  width: 100%;
 }
 
 h2 {
@@ -131,8 +132,6 @@ h2 {
 
 #aboutMe {
   display: grid;
-  min-height: 100vh;
-  width: 100vw;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "hc hc img";
@@ -166,37 +165,6 @@ h2 {
   box-sizing: content-box;
   position:relative;
   overflow: auto;
-  /* background: #606474; */
-  /* background: #fff; */
-  min-height: 100vh;
-}
-
-#experience::before {
-    /* display: block;
-    position: absolute; */
-    content: '';
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(115deg,
-      rgba(255,255,255,0.12),
-      rgba(255,255,255,0),
-      rgba(0,0,0,0.2)
-    );
-    background: linear-gradient(115deg,
-      rgba(99, 135, 187,0.1),
-      rgba(99, 135, 187,0.4),
-      rgba(99, 135, 187,0.6)
-    );
-
-    background: linear-gradient(115deg,
-      rgba(63, 94, 130, 0.1),
-      rgba(63, 94, 130, 0.4),
-      rgba(63, 94, 130, 0.6)
-    );
-
-    z-index: 1;
 }
 
 @media screen and (max-width: 1000px) {
@@ -204,7 +172,6 @@ h2 {
     grid-template-columns: 1fr;
     grid-template-areas:
     "hc";
-
   }
 
   #about-me__img__ctn {
@@ -224,6 +191,7 @@ h2 {
     display: none;
   }
 }
+
 #experience h2 {
   position: relative;
   z-index: 2;
@@ -298,7 +266,6 @@ h2 {
   position: absolute;
 }
 
-
 .experience__hover-card__aux-ctn {
   position: relative;
   padding: 0;
@@ -366,10 +333,6 @@ h2 {
 
 form {
   box-shadow: none;
-}
-
-#contact {
-  min-height: 100vh;
 }
 
 #contact h3 {
