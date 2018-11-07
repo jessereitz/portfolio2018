@@ -30,7 +30,7 @@ h2 {
   max-width: 100vw;
   overflow: hidden;
   padding: 1em 1rem;
-  background-image: url('https://jrweb-portfolio-files.s3.amazonaws.com/static/portfolio/images/cover2.jpg');
+  background-image: url('./images/hero-cover.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
