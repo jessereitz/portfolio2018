@@ -201,18 +201,19 @@ h2 {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 100%;
+  max-width: 100em;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
   padding: 1em 1rem;
+  justify-items: center;
 }
 
 #experienceCardCtn .hover-card {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 50em;
   margin: 0;
   padding: 0;
   overflow: hidden;
