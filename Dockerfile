@@ -1,2 +1,4 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html
+
+COPY ./data/nginx/app.conf /etc/nginx/conf.d
+COPY . /var/www/jessereitz.com
