@@ -1,3 +1,5 @@
+/data/certbot
+
 # Logs
 logs
 *.log
