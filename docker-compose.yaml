@@ -3,7 +3,6 @@ version: '3'
 services:
   nginx:
     image: gcr.io/jreitz-portfolio/portfolio:latest
-    pull: true
     restart: unless-stopped
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
