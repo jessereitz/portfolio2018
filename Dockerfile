@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:1.17.7-alpine
 
 COPY ./data/nginx/app.conf /etc/nginx/conf.d
-COPY . /var/www/jessereitz.com
+COPY ./src /var/www/jessereitz.com
